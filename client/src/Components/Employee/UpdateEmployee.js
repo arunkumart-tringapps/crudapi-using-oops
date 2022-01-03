@@ -37,7 +37,7 @@ const UpdateEmployee = () => {
         console.log("newEmp", newEmp);
         console.log("id, name, age, salary, position", id, name, age, salary, position)
         await Axios.put("http://localhost:3001/updateall", {id, name, age, salary, position});
-        navigate('/home');
+        navigate('/');
     }
     return (
         <div className="container">

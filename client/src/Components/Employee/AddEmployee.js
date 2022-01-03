@@ -34,7 +34,7 @@ const AddEmployee = () => {
         if(isFormValid()){
             console.log("inside isFormValid if condition");
             await Axios.post("http://localhost:3001/create", newEmp);
-            navigate('/home');
+            navigate('/');
         }else{
             alert("Fill correct user detials");
         }
