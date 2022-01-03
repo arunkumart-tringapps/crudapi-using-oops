@@ -1,11 +1,4 @@
-const mysql2 = require('mysql2');
 const {Employee} = require("../model/Employee.js");
-const conn = mysql2.createConnection({
-    database:"employeedatabase",
-    host:"localhost",
-    user: "root",
-    password: "Mysql.pw.5.@"
-});
 
 const getParticularEmployeeById = (req, resp) => {
     console.log("Inside get emp by id: ");

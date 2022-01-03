@@ -5,7 +5,7 @@ const cors = require('cors');
 const app = express();
 const port = 3001;
 
-const {updateAllAttributesOfEmployee, getParticularEmployeeById,updateEmployeeSalary, updateEmployeePosition, updateEmployeeName, updateEmployeeAge, createEmployee, getAllEmployee, deleteParticularEmployeeById, deleteAllEmployee} = require("./controllers/emplyeeController.js")
+const {updateAllAttributesOfEmployee, getParticularEmployeeById,updateEmployeeSalary, updateEmployeePosition, updateEmployeeName, updateEmployeeAge, createEmployee, getAllEmployee, deleteParticularEmployeeById, deleteAllEmployee} = require("./controllers/employeeController.js")
 
 app.use(cors());
 app.use(express.json());
