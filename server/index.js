@@ -5,13 +5,6 @@ const cors = require('cors');
 const app = express();
 const port = 3001;
 
-
-const conn = mysql2.createConnection({
-    database:"employeedatabase",
-    host:"localhost",
-    user: "root",
-    password: "Mysql.pw.5.@"
-});
 const {updateAllAttributesOfEmployee, getParticularEmployeeById,updateEmployeeSalary, updateEmployeePosition, updateEmployeeName, updateEmployeeAge, createEmployee, getAllEmployee, deleteParticularEmployeeById, deleteAllEmployee} = require("./controllers/emplyeeController.js")
 
 app.use(cors());
