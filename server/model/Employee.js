@@ -4,7 +4,7 @@ const conn = mysql2.createConnection({
     database:"employeedatabase",
     host:"localhost",
     user: "root",
-    password: "Mysql.pw.5.@"
+    password:"mysql"
 });
 
  class Employee{

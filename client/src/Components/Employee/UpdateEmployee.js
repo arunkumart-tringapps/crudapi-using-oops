@@ -8,9 +8,9 @@ const UpdateEmployee = () => {
     // alert(id);
     const [newEmp, setNewEmp] = useState({
         "name": "",
-        "age": 0,
+        "age": "",
         "position": "",
-        "salary": 0
+        "salary": ""
     })
 
     const {name, age, position, salary} = newEmp;
