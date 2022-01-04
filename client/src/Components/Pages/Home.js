@@ -42,19 +42,20 @@ const Home = () => {
         <div className="py-4">
           <h1>Employee details</h1>
           <button
-            className="btn btn-danger mt-5"
+            className="btn btn-danger mt-3"
             onClick={() => deleteAllEmployees()}
           >
             Delete all Employees
           </button>
-          <table className="table border shadow mt-5">
-            <thead className="thead-dark">
+          <table className="table table-bordered table-hover table-striped mt-2">
+            <thead className='table-primary' >
               <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Name</th>
                 <th scope="col">Age</th>
                 <th scope="col">Position</th>
                 <th scope="col">Salary</th>
+                <th scope="col">Edit/ Delete</th>
               </tr>
             </thead>
             <tbody>
@@ -67,14 +68,14 @@ const Home = () => {
                   <td scope="row">{emp.salary}</td>
                   <td>
                     <Link
-                      className="btn btn-primary"
+                      className="btn btn-primary mr-2"
                       to={`/updateemployee/${emp.id}`}
                     >
                       Edit
                     </Link>
 
                     <button
-                      className="btn btn-danger mr-2"
+                      className="btn btn-danger ml-2"
                       onClick={() => deleteEmployee(emp.id)}
                     >
                       Delete
