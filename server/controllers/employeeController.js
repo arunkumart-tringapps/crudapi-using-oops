@@ -23,6 +23,7 @@ const deleteParticularEmployeeById = (req,resp) => {
 };
 
 const deleteAllEmployee = (req, resp) => {
+    console.log("")
     Employee.deleteAllEmployee((status_, result) =>{
         if(status_ === 0){
             resp.status(500).json({"error: cannot delete": result});

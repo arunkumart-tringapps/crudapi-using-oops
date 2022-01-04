@@ -9,6 +9,18 @@ const Home = () => {
         loadEmployees();
     }, []);
 
+    const deleteAllEmployees = async () => {
+        if (window.confirm("Do you really want to delete ALL EMPLOYEES?")) { 
+            const response = await Axios.delete(
+              "http://localhost:3001/deleteall"
+            );
+            console.log("delete response", response);
+            setEmployeesList([]);
+        }
+
+      
+    };
+
     const deleteEmployee = async (empId) => {
         if(window.confirm("Do you really want to delete?")){
             const response = await Axios.delete(`http://localhost:3001/delete/${empId}`);
@@ -28,7 +40,8 @@ const Home = () => {
     return(
         <div className='container'>
             <div className='py-4'>
-                <h1>Home page</h1>
+                <h1>Employee details</h1>
+                <button className='btn btn-danger' onClick={()=> deleteAllEmployees()}>Delete all Employees</button>
                 <table className='table border shadow'>
                     <thead className='thead-dark'>
                         <tr>
