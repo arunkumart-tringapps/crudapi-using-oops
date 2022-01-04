@@ -37,41 +37,55 @@ const Home = () => {
         
     }
 
-    return(
-        <div className='container'>
-            <div className='py-4'>
-                <h1>Employee details</h1>
-                <button className='btn btn-danger' onClick={()=> deleteAllEmployees()}>Delete all Employees</button>
-                <table className='table border shadow'>
-                    <thead className='thead-dark'>
-                        <tr>
-                            <th scope='col'>Id</th>
-                            <th scope='col'>Name</th>
-                            <th scope='col'>Age</th>
-                            <th scope='col'>Position</th>
-                            <th scope='col'>Salary</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {employeesList.map((emp) => 
-                        <tr key={emp.id}>
-                                <td scope='row'>{emp.id}</td>
-                                <td scope='row'>{emp.name}</td>
-                                <td scope='row'>{emp.age}</td>
-                                <td scope='row'>{emp.position}</td>
-                                <td scope='row'>{emp.salary}</td>
-                                <td >
-                                    <Link className='btn btn-primary' to={`/updateemployee/${emp.id}`}>Edit</Link>
-                                    
-                                    <button className='btn btn-danger mr-2' onClick={() => deleteEmployee(emp.id)}>Delete</button>
-                                </td>
-                            </tr>
-                        
-                        )}
-                    </tbody>
-                </table>
-            </div>
+    return (
+      <div className="container">
+        <div className="py-4">
+          <h1>Employee details</h1>
+          <button
+            className="btn btn-danger mt-5"
+            onClick={() => deleteAllEmployees()}
+          >
+            Delete all Employees
+          </button>
+          <table className="table border shadow mt-5">
+            <thead className="thead-dark">
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Position</th>
+                <th scope="col">Salary</th>
+              </tr>
+            </thead>
+            <tbody>
+              {employeesList.map((emp) => (
+                <tr key={emp.id}>
+                  <td scope="row">{emp.id}</td>
+                  <td scope="row">{emp.name}</td>
+                  <td scope="row">{emp.age}</td>
+                  <td scope="row">{emp.position}</td>
+                  <td scope="row">{emp.salary}</td>
+                  <td>
+                    <Link
+                      className="btn btn-primary"
+                      to={`/updateemployee/${emp.id}`}
+                    >
+                      Edit
+                    </Link>
+
+                    <button
+                      className="btn btn-danger mr-2"
+                      onClick={() => deleteEmployee(emp.id)}
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
+      </div>
     );
 };
 export default Home;
